@@ -1,0 +1,14 @@
+# osx
+.DS_Store
+.idea
+
+# node.js
+build
+node_modules
+
+# remove once project is cloned
+# -------------------------------------------------------------------
+package-lock.json
+package.json
+tsconfig.json
+# -------------------------------------------------------------------

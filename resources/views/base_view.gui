@@ -1,0 +1,31 @@
+<svg id="view-base" viewport-fill="black">
+    <!-- Main Wrapper -->
+    <image id="no-phone" href="./resources/images/no_phone.png" />
+    <section y="50" height="100%-50">
+        <text
+            x="50%"
+            y="50%"
+            font-family="System-Regular"
+            fill="#4bfbc7"
+            font-size="30"
+            font-weight="bold"
+            text-anchor="middle">Test Text</text>
+
+        <use id="btn-test" href="#square-button" fill="#1effce">
+            <set href="#text" attributeName="text-length" to="12" />
+            <set href="#text" attributeName="text-buffer" to="Test Button" />
+        </use>
+
+        <use id="btn-close" href="#combo-button-lower-right" fill="tomato">
+            <set
+                href="combo-button-icon"
+                attributeName="href"
+                to="./resources/images/btn_combo_x_press_p.png"/>
+            <set
+                href="combo-button-icon-press"
+                attributeName="href"
+                to="./resources/images/btn_combo_x_p.png"/>
+            <set href="combo-button-stroke" attributeName="display" to="inline"/>
+        </use>
+    </section>
+</svg>
