@@ -44,7 +44,7 @@ function onMount() {
     clock.granularity               = "minutes";
     clock.ontick                    = (evt) => {
         let time = format12hrTime(evt.date);
-        debugLog(time);
+        debugLog(`${time.hours}:${time.mins}${time.ampm}`);
     }
     // messaging
     messaging.peerSocket.onmessage  = onMessageRecieved;
