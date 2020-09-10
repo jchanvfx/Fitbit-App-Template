@@ -15,7 +15,7 @@ import * as cfg from "../../common/config";
 let NoPhone;
 let ButtonTest;
 let ButtonClose;
-let AppSettings;
+let Settings;
 
 // screen entry point.
 let VIEWS;
@@ -24,9 +24,9 @@ export function init(_views, _options) {
     VIEWS   = _views;
     OPTIONS = _options;
 
-    AppSettings = apputils.createAppSettings(cfg.APP_SETTINGS_FILE);
+    Settings = new apputils.AppSettings(cfg.APP_SETTINGS_FILE);
 
-    NoPhone = document.getElementById("no-phone");
+    NoPhone = new apputils.BaseCtlr("no-phone");
     ButtonTest = document.getElementById("btn-test");
     ButtonClose = document.getElementById("btn-close");
 
@@ -38,7 +38,7 @@ export function init(_views, _options) {
 
 function onMount() {
 
-    apputils.hide(NoPhone);
+    NoPhone.hide();
 
     // log time
     clock.granularity               = "minutes";
