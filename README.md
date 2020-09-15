@@ -9,8 +9,8 @@ api: https://dev.fitbit.com/build/reference/
 Commandline Reference:
 
 ### Install the sdk & dependcies
-`npm add --dev @fitbit/sdk`
-`npm add --dev @fitbit/sdk-cli`
+`npm add --only=dev @fitbit/sdk`
+`npm add --only=dev @fitbit/sdk-cli`
 
 ### Login Fitbit
 `npx fitbit`
