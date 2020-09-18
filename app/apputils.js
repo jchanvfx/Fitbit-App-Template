@@ -15,8 +15,8 @@ export function AppSettings(filename) {
         writeFileSync(this.filename, data, "cbor");
     };
     this.load = () => {
-        if (existsSync(`/private/data/${settingsFile}`)) {
-            return readFileSync(settingsFile, "cbor");
+        if (existsSync(`/private/data/${this.filename}`)) {
+            return readFileSync(this.filename, "cbor");
         }
         return {};
     };
