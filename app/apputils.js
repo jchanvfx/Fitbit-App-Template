@@ -11,7 +11,7 @@ export function isVisible(element) {return element.style.display === "inline";}
 // Base Element Abstraction Controller.
 export function AppSettings(filename) {
     this.filename = filename;
-    this.save = () => {
+    this.save = (data) => {
         writeFileSync(this.filename, data, "cbor");
     };
     this.load = () => {
