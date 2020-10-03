@@ -11,7 +11,7 @@
         x="50%"
         y="100%-48"
         font-family="System-Bold"
-        fill="fb-aqua"
+        fill="fb-yellow"
         font-size="22"
         font-weight="bold"
         text-anchor="middle">loading...</text>
@@ -22,5 +22,5 @@
         fill="fb-light-gray"
         font-size="20"
         font-weight="bold"
-        text-anchor="middle">Test App</text>
+        text-anchor="middle">Example App</text>
 </svg>

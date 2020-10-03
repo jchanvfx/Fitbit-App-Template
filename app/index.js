@@ -1,16 +1,15 @@
-import { init } from "./views";
+import { AppController } from "./apputils";
+import { ExampleViewController } from "./views/example"
+import { ExampleListViewController } from "./views/list_example"
 
-/**
- * Definition for each view in the resources/views folder, and the associated
- * JavaScript module is lazily loaded alongside its view.
- */
-const views = init([
-
-    // add gui screens.
-    ["base_view", () => import("./views/base_view")],
-    // ["main_screen", () => import("./views/main_screen")],
-
-], "./resources/views/");
+const controller = new AppController();
+controller.init({
+    "example"      : new ExampleViewController(),
+    "list_example" : new ExampleListViewController(),
+});
 
 // Select the first view after 1 second
-setTimeout(() => {views.navigate("base_view");}, 500);
+// ----------------------------------------------------------------------------
+setTimeout(() => {
+    controller.navigate("example");
+}, 1000);

@@ -4,7 +4,7 @@ text {
     fill: "white";
 }
 
-#view-base image#no-phone {
+#view-example image#no-phone {
     x: 50%-13;
     y: 6;
     width: 26;

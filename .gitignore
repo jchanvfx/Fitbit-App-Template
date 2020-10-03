@@ -5,10 +5,12 @@
 # node.js
 build
 node_modules
+package-lock.json
+tsconfig.json
+yarn-error.log
+yarn.lock
 
 # remove once project is cloned
 # -------------------------------------------------------------------
-package-lock.json
 package.json
-tsconfig.json
 # -------------------------------------------------------------------
