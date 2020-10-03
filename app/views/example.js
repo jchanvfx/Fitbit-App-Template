@@ -18,8 +18,7 @@ let Button;
 let Settings;
 
 
-export function ExampleViewController(views) {
-    this.views = views;
+export function ExampleViewController() {
     this.name;
     this.navigate;
     this.onMount = (kwargs) => {
