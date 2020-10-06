@@ -32,13 +32,8 @@ export function AppController() {
         if (this._current !== undefined) {this._current.onUnMount();}
         document.location.replace(`${VIEW_GUI_PATH}/${name}.view`)
             .then(() => {
-                try {
-                    this._current = this._views[name];
-                    this._current.onMount(kwargs);
-                }
-                catch(err) {
-                    console.log(`View Error: ${err.stack}`);
-                }
+                this._current = this._views[name];
+                this._current.onMount(kwargs);
             })
             .catch((error) => {
                 console.log(`\n\nNavigation Error: ${error}\n`);

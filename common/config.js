@@ -1,4 +1,4 @@
-export const APP_VER           = '0.1.0-a1';
+export const APP_VER           = '0.1.0';
 export const APP_NAME          = 'my_app';
 export const APP_SETTINGS_FILE = `${APP_NAME}.settings.cbor`;
 

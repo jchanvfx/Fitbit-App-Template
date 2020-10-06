@@ -12,7 +12,6 @@ import * as messaging from "messaging";
 import * as app from "../apputils";
 import * as cfg from "../../common/config";
 
-
 let NoPhone;
 let Button;
 let Settings;
@@ -22,15 +21,16 @@ export function ExampleViewController() {
     this.name;
     this.navigate;
     this.onMount = (kwargs) => {
+        let options = kwargs || {};
 
         Settings = new app.AppSettings(cfg.APP_SETTINGS_FILE);
-        Button = new app.ButtonTextCtrl("mybtn");
+        Button   = new app.ButtonTextCtrl("mybtn");
         NoPhone  = new app.BaseCtlr("no-phone");
 
         NoPhone.hide();
 
         Button.onclick = () => {
-            debugLog("fooo");
+            debugLog("button clicked");
             this.navigate("list_example");
         };
 
@@ -52,12 +52,18 @@ export function ExampleViewController() {
         debugLog(`>>> :: initialize view! - ${this.name}`);
     };
     this.onUnMount = () => {
+        // unlink the callbacks.
         clock.granularity               = "off";
         clock.ontick                    = undefined;
         inbox.onnewfile                 = undefined;
         messaging.peerSocket.onopen     = undefined;
         messaging.peerSocket.onclose    = undefined;
         messaging.peerSocket.onmessage  = undefined;
+
+        // clean up references here just in case.
+        Settings = undefined;
+        Button   = undefined;
+        NoPhone  = undefined;
 
         debugLog(`>>> :: unmounted view! - ${this.name}`);
     };

@@ -44,3 +44,8 @@ export function formatMilliseconds(msecs) {
     }
     return `${minutes}:${seconds}`;
 }
+export const getDayInAdvance = (daysInAdvance=1) => {
+    let day = new Date();
+    day.setDate(day.getDate() + daysInAdvance);
+    return day;
+}
