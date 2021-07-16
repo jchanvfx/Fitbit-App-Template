@@ -8,7 +8,7 @@ export function isVisible(element) {return element.style.display === "inline";}
 
 // ----------------------------------------------------------------------------
 
-// Base Element Abstraction Controller.
+// Base Application Settings Controller.
 export function AppSettings(filename) {
     this.filename = filename;
     this.save = (data) => {
